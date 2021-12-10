@@ -1,0 +1,8 @@
+# http://astyle.sourceforge.net/astyle.html#_Options_File
+style=google
+indent=spaces=4
+break-blocks
+pad-oper
+pad-comma
+pad-header
+suffix=none
