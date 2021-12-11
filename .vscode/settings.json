@@ -20,10 +20,12 @@
 
     // \ files
     "files.exclude": {
+        "**/docs/**":true,
         "**/__pycache__/**":true, "**/.pytest_cache/**":true,
         "**/u/**":true,
     },
     "files.watcherExclude": {
+        "**/docs/**":true,
         "**/__pycache__/**":true, "**/.pytest_cache/**":true,
     },
     "files.associations": {

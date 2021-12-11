@@ -68,9 +68,10 @@ CFLAGS  += -O0 -g2 -I$(SRC) -I$(TMP)
 # \ all
 
 .PHONY: all
-all: $(BIN)/$(MODULE)
-	$(MAKE) tmp/format_cpp
+all: $(BIN)/$(MODULE) $(U)
+#	$(MAKE) tmp/format_cpp
 	cat $(U) | $^
+#	$(MAKE) doxy
 
 .PHONY: meta
 meta: $(PY) $(MODULE).metaL.py
@@ -128,6 +129,7 @@ gz:
 # / install
 
 # \ merge
+S = $(shell echo $(C) | grep -v "tmp/")
 MERGE  = Makefile README.md .gitignore apt.dev apt.txt doxy.gen $(S)
 MERGE += .vscode bin doc lib src tmp
 

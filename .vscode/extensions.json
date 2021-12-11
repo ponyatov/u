@@ -6,5 +6,6 @@
         // "auchenberg.vscode-browser-preview",
         // "ms-azuretools.vscode-docker",
         "tht13.python",
+        "ms-vscode.cpptools",
     ]
 }

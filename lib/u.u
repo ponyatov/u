@@ -1,4 +1,8 @@
 # line comment
 
-# numbers
--01 +02.30 -4e+05 0xDeadBeef 0b1101
+:FORTH
+init:
+        nop
+        bye
+
+.dump
