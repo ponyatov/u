@@ -15,15 +15,3 @@ extern int main(int argc, char *argv[]) {
 extern void arg(int argc, char *argv) {  //
     fprintf(stderr, "%i:%s\n", argc, argv);
 }
-
-char *yyfile = nullptr;
-
-extern void yyerror(const char *msg) {
-    fprintf(stderr, "\n\n%s:%i %s [%s]\n\n", yyfile, yylineno, msg, yytext);
-    abort();
-}
-
-addr Cp = 0;
-addr Ip = 0;
-
-std::map<std::string, addr> label;

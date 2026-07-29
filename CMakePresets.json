@@ -9,8 +9,7 @@
         {
             "name"            :  "linux",
             "configurePreset" :  "linux",
-            "targets"         : ["all","install"],
-            "jobs"            :   4
+            "targets"         : ["all","install"]
         }
     ],
     "configurePresets": [
