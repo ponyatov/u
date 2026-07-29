@@ -1,0 +1,5 @@
+git make curl fzf
+code meld unison
+g++ cmake pkg-config clang-format
+flex bison ragel libreadline-dev
+g++-mingw-w64-i686-win32
