@@ -1,7 +1,6 @@
 
 .PHONY: doc
 doc: $(DOC)
-	unison $(APP)
 
 .PHONY: doxy
 doxy: .doxygen doc/DoxygenLayout.xml vscode/logo.png
