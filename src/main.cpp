@@ -12,6 +12,7 @@ extern int main(int argc, char *argv[]) {
     }
     return vm();
 }
+
 extern void arg(int argc, char *argv) {  //
     fprintf(stderr, "%i:%s\n", argc, argv);
 }
