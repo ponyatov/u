@@ -64,7 +64,8 @@ extern bool debug;  ///< debug flag
 /// @brief VM command opcode
 enum class Op : uint8_t {  //
     nop = 0x00,            ///< 00 `( -- )` @ref nop
-    halt = 0xFF            ///< FF `( -- )` @ref halt
+    halt = 0xFF,           ///< FF `( -- )` @ref halt
+    gui = 0xE0,            ///< E0 `( -- )` start @ref GUI
 };
 
 extern void nop();   ///< `( -- )` empty command (do nothing)

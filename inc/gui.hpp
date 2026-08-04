@@ -29,7 +29,7 @@ struct RGBA {
 
 class GUI {
    public:
-    static void init(int argc, char *argv[]);  ///< start GUi system
+    static void init(int argc, char *argv[]);  ///< start @ref GUI system
     static void fini();   ///< stop GUI system (before @ref halt)
     static uint16_t W;    ///< screen width (cell phone emulation)
     static uint16_t H;    ///< screen height (cell phone emulation)
