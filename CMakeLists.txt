@@ -15,7 +15,7 @@ message("-- |    target: " "hw:" ${HW} " cpu:" ${CPU} " arch:" ${ARCH} " os:" ${
 message("-- |   startup: " "${S}")
 message("-- |    linker: " "${LD}")
 message("-- |    binary: " "${CMAKE_INSTALL_PREFIX}/${BIN_OUTPUT_NAME}${CMAKE_EXECUTABLE_SUFFIX}")
-message("-- |       ini: " "${U}")
+message("-- |       ini: " "${INI}")
 message("-- |      data: " "${DATA}")
 message("-- |       cpp: " "${C} ${CP}")
 message("-- |       hpp: " "${H} ${HP}")
@@ -26,7 +26,7 @@ add_executable(${CMAKE_PROJECT_NAME}
     ${C}  ${H}          # C/C++ sources
     ${CP} ${HP}         # generated parsers
     ${S}  ${LD}         # embedded/lowlevel
-    ${U}                # init/config files & scripts
+    ${INI}              # init/config files & scripts
     ${DATA}             # precompiled binary data (bytecode,..)
 )
 
