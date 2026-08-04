@@ -1,7 +1,5 @@
 /// @file
 /// @brief VM for embedded script engine
-/// @defgroup vm vm
-/// @brief VM for embedded script engine
 #pragma once
 
 #include <assert.h>
@@ -13,7 +11,7 @@
 #include <string>
 
 #ifdef SDL
-#include <SDL2/SDL.h>
+#include "gui.hpp"
 #endif  // SDL
 
 /// @defgroup main main
@@ -40,36 +38,5 @@ extern void yyerror(const char *msg);
 #include "u.yacc.hpp"
 /// @}
 
-/// @defgroup type type
-/// @brief MCU-friendly types
-/// @ingroup vm
-/// @{
-typedef uint8_t byte;
-typedef uint32_t addr;
-typedef int32_t cell;
-/// @}
-
-/// @defgroup config config
-/// @ingroup vm
-/// @{
-/// @ref M size, bytes (64K max)
-#define Msz 0x10000
-/// @}
-
-/// @defgroup memory memory
-/// @brief vat memory (actors runs as VM threads in a single Vat)
-/// @ingroup vm
-/// @{
-extern addr Cp;  ///< compiler pounter
-extern addr Ip;  ///< instruction pointer
-                 /// @}
-
-/// @defgroup compiler compiler
-/// @brief bytecode compiler (AOT/REPL)
-/// @{
-extern std::map<std::string, addr> label;  ///< known sybolic labels
-/// @}
-
-/// bytecode interpreter
-/// @returns int return from @ref main
-extern int vm();
+#include "vm.hpp"
+#include "compiler.hpp"

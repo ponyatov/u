@@ -1,10 +1,12 @@
 #include "u.hpp"
 
 extern int main(int argc, char *argv[]) {
-    arg(0, argv[0]);
 #ifdef SDL
-    assert(!SDL_Init(SDL_INIT_VIDEO));
-#endif                                // SDL
+    GUI::init(argc, argv);
+    atexit(GUI::fini);
+#endif  // SDL
+
+    arg(0, argv[0]);
     for (int i = 1; i < argc; i++) {  //
         arg(i, argv[i]);
         yyfile = argv[i];
@@ -13,6 +15,7 @@ extern int main(int argc, char *argv[]) {
         fclose(yyin);
         yyfile = nullptr;
     }
+
     return vm();
 }
 
