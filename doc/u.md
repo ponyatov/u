@@ -5,3 +5,5 @@
 
 github: https://github.com/ponyatov/u
 
+- bytecode/stack VM
+- tiny portable GUI (SDL-based)
