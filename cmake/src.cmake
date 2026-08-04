@@ -36,3 +36,8 @@ foreach(h ${H})
 endforeach()
 list(REMOVE_DUPLICATES INC)
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${INC})
+
+file(GLOB_RECURSE U CONFIGURE_DEPENDS
+    lib/*.ini lib/*.u
+)
+set_source_files_properties(${U} PROPERTIES HEADER_FILE_ONLY TRUE)

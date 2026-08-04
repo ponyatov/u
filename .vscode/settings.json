@@ -72,7 +72,7 @@
     "cmake.ignoreCMakeListsMissing"    : false,
     "cmake.debugConfig"     : {
         "cwd" :   "${workspaceFolder}",
-        "args": [ "lib/${workspaceFolderBasename}.ini" ] },
+        "args": [ "lib/${workspaceFolderBasename}.${workspaceFolderBasename}" ] },
 
     // MinGW/MSYS2
     "terminal.integrated.defaultProfile.windows": "UCRT64",

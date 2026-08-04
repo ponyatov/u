@@ -12,6 +12,10 @@
 #include <map>
 #include <string>
 
+#ifdef SDL
+#include <SDL2/SDL.h>
+#endif  // SDL
+
 /// @defgroup main main
 /// @brief POSIX entry point
 /// @{
