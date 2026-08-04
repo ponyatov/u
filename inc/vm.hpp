@@ -65,6 +65,10 @@ extern bool debug;  ///< debug flag
 enum class Op : uint8_t {  //
     nop = 0x00,            ///< 00 `( -- )` @ref nop
     halt = 0xFF,           ///< FF `( -- )` @ref halt
+    jmp = 0x01,            ///< 01 @ref addr `( -- )` @ref jmp
+    qjmp = 0x02,           ///< 02 @ref addr `( -- )` @ref qjmp
+    call = 0x03,           ///< 03 @ref addr `(R: -- addr )` @ref call
+    ret = 0x04,            ///< 04 `(R: addr -- )` @ref ret
     gui = 0xE0,            ///< E0 `( -- )` start @ref GUI
 };
 

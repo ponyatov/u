@@ -44,3 +44,24 @@ A virtual cluster based on a bytecode interpreter (without hardware virtualizati
 
 - Singularity (Historical Research OS)
 	- A [[Microsoft Research]] operating system that replaced hardware-based page tables with software-isolated processes running type-safe MSIL bytecode.
+
+## Trade-offs
+
+- *Pros*
+	- **low memory footprints**
+		- *allows to use MCU nodes*
+		- stack VM with single-byte commands has the most compact compiled code (comparing to RISC-like or register-based command sets)
+		-  extreme density
+			- thousands of virtual nodes on a single host
+			- millisecond node startup times
+	- **absolute platform portability**
+		- very fast VM porting to any new architecture or host OS
+	- unlimited debug capabilities
+- *Cons*
+	- bound to the specific language and bytecode ecosystem
+		- **need special compiler** (maybe multiple language frontends)
+	- lacks raw access to low-level hardware
+		- need some hw access gateways or special raw I/O commands
+
+## [[u/language]]
+## [[u/command]]
