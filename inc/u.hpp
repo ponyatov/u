@@ -24,6 +24,9 @@ extern int main(int argc, char *argv[]);
 extern void arg(int argc, char *argv);
 /// @}
 
+#include "compiler.hpp"
+#include "vm.hpp"
+
 /// @defgroup syntax syntax
 /// @ingroup compiler
 /// @brief syntax parser interface
@@ -37,6 +40,3 @@ extern int yyparse();
 extern void yyerror(const char *msg);
 #include "u.yacc.hpp"
 /// @}
-
-#include "vm.hpp"
-#include "compiler.hpp"
