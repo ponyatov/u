@@ -3,5 +3,5 @@
 doc: $(DOC)
 
 .PHONY: doxy
-doxy: .doxygen doc/DoxygenLayout.xml vscode/logo.png
+doxy: .doxygen doc/DoxygenLayout.xml vscode/logo.png sync
 	rm -rf doc/html ; doxygen $< 1>/dev/null
