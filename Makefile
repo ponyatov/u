@@ -24,3 +24,4 @@ include mk/gz.mk
 include mk/install.mk
 
 include mk/ai.mk
+include mk/rust.mk

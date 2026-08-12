@@ -83,5 +83,8 @@
             "env": {
             "MSYSTEM": "UCRT64",
             "CHERE_INVOKING": "1",
-    }}}
+    }
+}
+},
+"makefile.configureOnOpen": true
 }
